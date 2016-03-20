@@ -1,6 +1,6 @@
 var playlistId = 'PLZ0SiHbIVbOTo8DOGB4Cw_eQAONhuL_5L'
 var videoId = null;
-var clientId = ' 886659971303-l6vc35cr4fv8dfsndheivbhrq08d77oe.apps.googleusercontent.com';
+var clientId = '886659971303-l6vc35cr4fv8dfsndheivbhrq08d77oe.apps.googleusercontent.com';
 
 var scopes = 'https://www.googleapis.com/auth/youtube';
 
