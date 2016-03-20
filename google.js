@@ -56,7 +56,8 @@ function checkAndPublishGoogle() {
   gapi.client.load('youtube', 'v3').then(function() {
     var request = gapi.client.youtube.playlistItems.list({
       part: 'snippet',
-      playlistId: playlistId
+      playlistId: playlistId,
+      maxResults: 50
     });
 
     request.then(function(resp) {
