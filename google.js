@@ -3,7 +3,7 @@ var playlistId = 'PLGzDq0vHmSLEkNYmLdqcnQh4E_fzW5-xd';
 var videoId = null;
 var clientId = '886659971303-l6vc35cr4fv8dfsndheivbhrq08d77oe.apps.googleusercontent.com';
 
-var scopes = 'https://www.googleapis.com/auth/youtube,https://www.googleapis.com/auth/youtube.upload';
+var scopes = 'https://www.googleapis.com/auth/youtubepartner';
 
 function handleClientLoad() {
   checkAuth();
