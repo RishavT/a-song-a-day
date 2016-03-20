@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Facebook Login JavaScript Example</title>
-<meta charset="UTF-8">
+  <title>A Song a Day</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
 </head>
+
 <body>
-<script type="text/javascript" src="facebook.js"></script>
-<script type="text/javascript" src="google.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-<script>
-  function publish() {
-    console.log('Publishing');
-    publishFacebook();
-    checkAndPublishGoogle();
-    console.log('Done');
-  }
-</script>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>A Song a Day</h1>
+      <p>Post a video to the Facebook page and YouTube channel easily</p>
 
-<fb:login-button id="fblogin" scope="public_profile,publish_actions,user_managed_groups" onlogin="checkLoginState();">
-</fb:login-button>
-<button id="authorize-button-google">Authorize Google</button>
-<div id="status">
-</div>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <script type="text/javascript" src="facebook.js"></script>
+      <script type="text/javascript" src="google.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+      <script>
+        function publish() {
+          console.log('Publishing');
+          publishFacebook();
+          checkAndPublishGoogle();
+          console.log('Done');
+        }
+      </script>
 
-<div>
-  Youtube link: <input type="text" id="link" name="link"/><br/>
-  Description: <input type="text" id="description" name="description"/><br/>
-  <button onClick="publish()">Post</button>
-</div>
+      <fb:login-button id="fblogin" scope="public_profile,publish_actions,user_managed_groups" onlogin="checkLoginState();">
+      </fb:login-button>
+      <button id="authorize-button-google">Authorize Google</button>
+      <div id="status">
+      </div>
 
+      <div>
+        Youtube link:
+        <input type="text" class="form-control" id="link" name="link" />
+        <br/> Description:
+        <textarea class="form-control" id="description" name="description"></textarea>
+        <br/>
+        <button onClick="publish()">Post</button>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

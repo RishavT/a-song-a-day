@@ -11,7 +11,7 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
 
-    // document.getElementById('fblogin').style = 'display: none;'
+    document.getElementById('fblogin').style = 'display: none;'
     testAPI();
     getFriends();
   } else {
