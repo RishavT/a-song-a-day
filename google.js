@@ -1,5 +1,5 @@
-// var playlistId = 'PLZ0SiHbIVbOTo8DOGB4Cw_eQAONhuL_5L'
-var playlistId = 'PLGzDq0vHmSLEkNYmLdqcnQh4E_fzW5-xd';
+var playlistId = 'PLZ0SiHbIVbOTo8DOGB4Cw_eQAONhuL_5L';
+// var playlistId = 'PLGzDq0vHmSLEkNYmLdqcnQh4E_fzW5-xd';
 var videoId = null;
 var clientId = '886659971303-l6vc35cr4fv8dfsndheivbhrq08d77oe.apps.googleusercontent.com';
 
@@ -52,7 +52,7 @@ function checkAndPublishGoogle() {
     console.log('videoId: ');
     console.log(videoId);
   } else {
-    alert('Invalid YouTube video url')
+    alert('Invalid YouTube video url');
   }
   gapi.client.load('youtube', 'v3').then(function() {
     var request = gapi.client.youtube.playlistItems.list({
@@ -65,7 +65,7 @@ function checkAndPublishGoogle() {
       console.log('Videos in playlist: ');
       console.log(resp);
       var items = JSON.parse(resp.body).items;
-      var videoIds = []
+      var videoIds = [];
       items.forEach(function(el) {
         videoIds.push(el.snippet.resourceId.videoId);
       });
@@ -74,7 +74,7 @@ function checkAndPublishGoogle() {
       if (!videoIds.includes(videoId)) {
         publishGoogle();
       } else {
-        console.log('Video already there in playlist hence not adding.')
+        console.log('Video already there in playlist hence not adding.');
       }
     });
 
