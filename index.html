@@ -25,6 +25,10 @@
           checkAndPublishGoogle();
           console.log('Done');
         }
+
+        function updatePlaylistId() {
+            playlistId = document.getElementById('youtubePlaylistId').value;
+        }
       </script>
 
       <fb:login-button id="fblogin" scope="public_profile,publish_actions,user_managed_groups" onlogin="checkLoginState();">
@@ -40,6 +44,12 @@
         <textarea class="form-control" id="description" name="description"></textarea>
         <br/>
         <button onClick="publish()">Post</button>
+      </div>
+
+      <div>
+          Custom youtube playlist id:
+          <input type="text" class="form-control" id="youtubePlaylistId" name="youtubePlaylistId" />
+          <button onclick="updatePlaylistId()">Update Channel ID</button>
       </div>
     </div>
   </div>
