@@ -75,6 +75,7 @@ function checkAndPublishGoogle() {
         publishGoogle();
       } else {
         console.log('Video already there in playlist hence not adding.');
+        alert('Video already there in playlist hence not adding it.');
       }
     });
 
@@ -105,6 +106,7 @@ function publishGoogle() {
       //
       // document.getElementById('content').appendChild(heading);
       console.log(resp);
+      alert('Publish to youtube complete.');
     }, function(reason) {
       console.log('Error: ' + reason.result.error.message);
     });
