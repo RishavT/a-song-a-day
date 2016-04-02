@@ -105,6 +105,7 @@ function publishFacebook() {
   FB.api('/' + fbGoupID + '/feed', 'post', data, function(response) {
     console.log('Posted to facebook');
     console.log(response);
+    alert('Posted to facebook successfully.');
     window.open('https://facebook.com/groups/' + fbGoupID, '_blank');
   })
 }
